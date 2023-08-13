@@ -1,0 +1,13 @@
+<div class="container my-5">
+    <h3>Hello User</h3>
+    <p>Welcome to Note Taking App</p>            
+    <h2>Variable</h2>
+    <p><%= tagline %></p>
+    <% mascots.map(function(mascot) { %>
+      <li>
+        <strong><%= mascot.name %></strong>
+        representing <%= mascot.organization %>,
+        born <%= mascot.birth_year %>
+      </li>
+    <% }); %>
+</div>
