@@ -1,0 +1,15 @@
+<div class="container my-5">
+    <div class="row">
+      <% if(searchResults != '') { %>
+        <% searchResults.forEach(function (note, index) { %>
+          
+          <a href="/dashboard/note/<%= note._id %>" class="text-decoration-none text-dark">
+          <h4><%= note.title %></h4>
+          </a>
+  
+        <% }) %>
+      <% } else { %>
+        <p>No items found.</p>
+      <% } %>
+    </div>
+</div>

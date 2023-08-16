@@ -1,20 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-light px-3 navbar-dark bg-dark">
   <div class="container"> 
-    <a class="navbar-brand" href="/">EJS Is Fun</a>
+    <a class="navbar-brand" href="/">Get Note</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto pe-2">
+      <ul class="navbar-nav ms-auto  pe-2">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">Add Note</a>
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <% if(user){ %>
+            <a class="nav-link" href="/dashboard/add">Add Note</a>
+          <% }%>         
         </li>
       </ul>
-      <div>
-        <button type="button" class="btn btn-light">Login</button>
+      <form class="nav my-2" role="search" method="POST" action="/dashboard/search">
+        <input type="search" name="searchTerm" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="ms-md-5">
+        <% if(!user){ %>
+          <a href="/auth/google" type="button" class="btn btn-primary">Sign Up</a>
+          <a href="/auth/google" type="button" class="btn btn-light ms-2">Sign In</a>
+        <% } else{ %>  
+          <a href="/logout" type="button" class="btn btn-primary">Logout</a>
+        <% } %>
       </div>
     </div>
   </div>
