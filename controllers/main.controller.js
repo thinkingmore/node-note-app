@@ -11,7 +11,7 @@ exports.homepage = async (req, res) => {
       
     res.render('pages/index', {
       user: req.user,
-      layout: '../views/pages/layout',
+      layout: "../views/layouts/layout",
     });
 }
   
@@ -27,7 +27,7 @@ exports.homepage = async (req, res) => {
     }
     res.render('pages/about',{
       user: req.user,
-      layout: '../views/pages/layout'
+      layout: "../views/layouts/layout",
     })
   }
  

@@ -12,9 +12,17 @@
 
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <main>
-      <%- body %>
-    </main>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+      
+      <main>
+        <%- body %>
+      </main>
+      
+    <footer class="mt-auto">
+      <%- include('../partials/footer'); %>
+    </footer>
     <!-- Bootstrap JavaScript -->
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -63,7 +63,7 @@ exports.dashboardViewNote = async (req, res) => {
       user: req.user,
       noteID: req.params.id,
       note,
-      layout: "../views/pages/layout",
+      layout: "../views/layouts/layout",
     });
   } else {
     res.send("Something went wrong.");
@@ -106,7 +106,7 @@ exports.dashboardDeleteNote = async (req, res) => {
 exports.dashboardAddNote = async (req, res) => {
   res.render("dashboard/add", {
     user: req.user,
-    layout: "../views/pages/layout",
+    layout: "../views/layouts/layout",
   });
 };
 
@@ -133,7 +133,7 @@ exports.dashboardSearch = async (req, res) => {
     res.render("dashboard/search", {
       user: req.user,
       searchResults: "",
-      layout: "../views/pages/layout",
+      layout: "../views/layouts/layout",
     });
   } catch (error) {}
 };
@@ -157,7 +157,7 @@ exports.dashboardSearchSubmit = async (req, res) => {
     res.render("dashboard/search", {
       user: req.user,
       searchResults,
-      layout: "../views/pages/layout",
+      layout: "../views/layouts/layout",
     });
   } catch (error) {
     console.log(error);

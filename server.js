@@ -66,6 +66,11 @@ app.get("/signup",  async (req, res)=> {
   res.render('pages/accounts/register')
 });
 
+// Handling non matching request from the client
+app.use((req, res, next) => {
+  res.status(404).render('pages/404')
+})
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
