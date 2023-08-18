@@ -3,17 +3,17 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
-            <form class="p-4">
+            <form action="/login" class="p-4" method="POST">
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+                <input type="text" class="form-control" id="username" name="username" required> <!-- Changed name to "username" -->
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" required>
               </div>
               <button type="submit" class="btn btn-primary w-100">Login</button>
-            </form>
+            </form>            
             <div class="text-center my-2">
                <p>Don't have an account, <a class="text-decoration-none" href="/register">Sign Up</a></p>
             </div>

@@ -8,7 +8,7 @@ exports.homepage = async (req, res) => {
       description: "Take notes.",
     }
 
-      
+    console.log(req.user,"we got the user")  
     res.render('pages/index', {
       user: req.user,
       layout: "../views/layouts/layout",

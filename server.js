@@ -57,15 +57,6 @@ app.use('/', authRoute);
 app.use('/', dashboardRoute);
 
 
-
-app.get("/login",  async (req, res)=> {
-  res.render('pages/accounts/login')
-});
-
-app.get("/signup",  async (req, res)=> {
-  res.render('pages/accounts/register')
-});
-
 // Handling non matching request from the client
 app.use((req, res, next) => {
   res.status(404).render('pages/404')
