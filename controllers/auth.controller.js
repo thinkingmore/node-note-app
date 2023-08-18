@@ -26,10 +26,11 @@ const signup = async (req, res) => {
 };
 
 const logout = (req, res) => {
-  req.logout();
-  res.status(200).send({ msg: "logged out" });
-  res.redirect('/login')
-};
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/login');
+  });
+}; 
 
 const isAuthenticated = (req, res) => {
   if (!req.user)

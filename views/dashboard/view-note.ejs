@@ -8,10 +8,13 @@
           </ol>
         </nav>
         <div class="col d-flex justify-content-between align-items-center">
-          <h1 class="h3">View Note</h1>
-          <button type="button" class="btn btn-danger me-2" data-bs-toggle="modal" id="deleteButton" data-bs-target="#deleteModal">
-            Delete
-          </button>
+          <h3>View Note</h3>
+          <divs>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-danger me-2" data-bs-toggle="modal" id="deleteButton" data-bs-target="#deleteModal">
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>  
@@ -21,9 +24,6 @@
       </div> 
       <div class="form-group mb-4">
         <textarea class="form-control pt-5 fs-4" id="body" name="body" placeholder="Take a note..." rows="12"><%= note.body %></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </form> 
   </div>

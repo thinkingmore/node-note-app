@@ -38,7 +38,7 @@ exports.dashboard = async (req, res) => {
       user: req.user,
       locals,
       notes,
-      layout: '../views/pages/layout',
+      layout: '../views/layouts/layout',
       current: page,
       pages: Math.ceil(count / perPage),
     });
