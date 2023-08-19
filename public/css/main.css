@@ -5,3 +5,14 @@
 .note-card {
     min-height: 280px;
 }
+
+.hero-wrapper {
+    line-height: 30px;
+    background-color: bisque;
+    padding: 30px;
+}
+
+.hero-wrapper p {
+    font-weight: 600;
+    font-size: 16px;
+}
